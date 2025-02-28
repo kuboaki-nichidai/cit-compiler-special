@@ -526,7 +526,7 @@ RIGHT_BRACE } null
 RIGHT_PAREN ) null
 SEMICOLON ; null
 EOF  null
-> ^C # <6>
+> ^C # <4>
 ----
 <1> `javac` コマンドを使って、作成したプログラムをコンパイルした。
 <2> `ls` コマンドで、classファイルができているか確認した。
@@ -623,7 +623,15 @@ NOTE: 7章が終わったら、コミットしてプッシュしなさい。
 ----
 $ javac com/craftinginterpreters/lox/Lox.java # <1>
 $ java com.craftinginterpreters.lox.Lox block_test.lox # <2>
-
+inner a # <3>
+outer b
+global c
+outer a
+outer b
+global c
+global a
+global b
+global c
 ----
 <1> `Lox.java` をコンパイルした。
 <2> `Lox` を使って `block_test.lox` を実行した。
@@ -642,7 +650,7 @@ NOTE: 8章が終わったら、コミットしてプッシュしなさい。
 ----
 $ javac com/craftinginterpreters/lox/Lox.java # <1>
 $ java com.craftinginterpreters.lox.Lox sample02.lox # <2>
-60
+60 # <3>
 false
 CCCccc
 true
