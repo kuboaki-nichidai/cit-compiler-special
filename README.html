@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <title>コンパイラ再評価者向け演習: cit-compiler-special</title>
 <link rel="stylesheet" href="css/mystyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,8 +24,10 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>立合もしくは監督の方は、演習実施前に再評価演習の受講者へ心得の指示をお願いします。
-受講生は同指示に従うこと。</p>
+<p>立合もしくは監督の方は、演習実施前に再評価演習の受講者へ心得の指示をお願いします。</p>
+</div>
+<div class="paragraph">
+<p>受講生は教員の指示に従うこと。</p>
 </div>
 </td>
 </tr>
@@ -42,10 +44,10 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Lox言語でプログラムを作成して動かす</p>
+<p>Lox言語でプログラムを作成して動かす。</p>
 </li>
 <li>
-<p>自分のLoxインタプリタを動作させる</p>
+<p>自分のLoxインタプリタを動作させる。</p>
 </li>
 </ol>
 </div>
@@ -62,8 +64,9 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>基本的には講義中の演習を実施していたのであれば、これらの準部はすでに済んでいるはず。
-もし、講義中に準備していなかったものがあれば、最初にこれらを準備すること（していなければ演習そのものが実施できない）。</p>
+<p>基本的には講義中の演習を実施していたのであれば、これらの準部はすでに済んでいるはず。<br>
+もし、講義中に準備していなかったものがあれば、最初にこれらを準備すること。<br>
+（していなければ演習そのものが実施できないだろう）</p>
 </div>
 </td>
 </tr>
@@ -71,13 +74,6 @@
 </div>
 <div class="sect2">
 <h3 id="_参照する資料">2.1. 参照する資料</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Googleクラスルームの「コンパイラ」の講義資料</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p>演習の進め方や、Asignmentの受け取り方、必要なソフトウェア等については、Boxフォルダで配布した次の文書を参照のこと。</p>
 </div>
@@ -85,9 +81,27 @@
 <dl>
 <dt class="hdlist1">コンパイラの講義用Boxフォルダの共有リンク</dt>
 <dd>
-<p><a href="https://nihon-u.box.com/s/5805inwn3t7442fq1wix2qyay3cfrtiq" class="bare">https://nihon-u.box.com/s/5805inwn3t7442fq1wix2qyay3cfrtiq</a></p>
+<p><a href="https://nihon-u.box.com/s/ea3bn1py3jcm1g5eoesw7og8iphwom3j" class="bare">https://nihon-u.box.com/s/ea3bn1py3jcm1g5eoesw7og8iphwom3j</a></p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+上記リンクは「リンクを知っている全員・表示およびダウンロード可能」となっている。
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <ul>
+<li>
+<p>「コンパイラ」の講義資料</p>
+</li>
 <li>
 <p>asciidocプラグインの設定.pdf（Chromeブラウザ用、Visual Studio Code用）</p>
 </li>
@@ -102,79 +116,160 @@
 </li>
 </ul>
 </div>
-</dd>
-</dl>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+いちいちBoxのファイルを開いていては手間がかかるので、いったんデスクトップなどにダウンロードし、オフラインでも参照可能にしておくこと。
+</td>
+</tr>
+</table>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>念のため、Boxへ移行する以前のGoogleドライブも挙げておく。</p>
+<p>もし、Boxドライブが閲覧できないようなら、共有申請すること。<br>
+ただし、電子メールベースなので、応答には時間がかかることに注意。</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">コンパイラの講義用Googleドライブの共有リンク</dt>
+<dt class="hdlist1">Crafting Interpreters のウエブサイト</dt>
 <dd>
-<p><a href="https://bit.ly/4fTCkI8" class="bare">https://bit.ly/4fTCkI8</a></p>
+<p><a href="https://craftinginterpreters.com/" class="bare">https://craftinginterpreters.com/</a></p>
+</dd>
+<dt class="hdlist1">Crafting Interpreters のGitHubリポジトリ</dt>
+<dd>
+<p><a href="https://github.com/munificent/craftinginterpreters/" class="bare">https://github.com/munificent/craftinginterpreters/</a></p>
 </dd>
 </dl>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>もし、Googleドライブが閲覧できないようなら、講義中に指示した共有の申請をしていないのが原因。
-共有申請をすればよいが、電子メールベースなので、応答には時間がかかる。</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_このassignmentを受理acceptする">2.2. このAssignmentを受理（Accept）する</h3>
+<h3 id="_ソフトウェアのインストール">2.2. ソフトウェアのインストール</h3>
 <div class="paragraph">
-<p>先述の「GitHub_Classroom_Assignmentの受け取り方_20220920.pdf」を参照して、このAssignmentを受理しなさい。</p>
-</div>
-<div class="paragraph">
-<p>受理すると、自分のGitHubアカウントのホームディレクトリに「cit-compiler-special-アカウント名」のようなリポジトリが作られる。</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ソフトウェアのインストール">2.3. ソフトウェアのインストール</h3>
-<div class="paragraph">
-<p>下記のソフトウェアをインストールする。</p>
+<p>下記のソフトウェアを使用する。未設定なものがあれば、インストールすること。</p>
 </div>
 <div class="sect3">
-<h4 id="_visual_studio_code">2.3.1. Visual Studio Code</h4>
+<h4 id="_visual_studio_codevs_code">2.2.1. Visual Studio Code（VS Code）</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">インストールがまだなら</dt>
+<dd>
+<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code" class="bare">https://azure.microsoft.com/ja-jp/products/visual-studio-code</a></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vs_codeのファイルエンコーディング設定">2.2.2. VS Codeのファイルエンコーディング設定</h4>
+<div class="paragraph">
+<p>Windows版のVS Codeでは、テキストファイルのエンコーディング指定が MS932あるいはShift-JISとなっている場合がある。本演習では、読む・書くともにUTF-8を使うことにするので、あらかじめエンコーディング設定を変更しておくこと。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">VS Codeでエンコーディングを変更、自動判別するには</dt>
+<dd>
+<p><a href="https://atmarkit.itmedia.co.jp/ait/articles/1806/01/news051.html" class="bare">https://atmarkit.itmedia.co.jp/ait/articles/1806/01/news051.html</a></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vs_code_機能拡張プラグインの追加">2.2.3. VS Code 機能拡張（プラグイン）の追加</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code" class="bare">https://azure.microsoft.com/ja-jp/products/visual-studio-code</a></p>
+<p>Java用の機能拡張をインストールする。</p>
 </li>
 <li>
-<p>機能拡張から、Java用、lox用の機能拡張を入れておくとよい。</p>
+<p>Lox用の機能拡張をインストールする。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Lox用機能拡張も、Visual Studio Codeの機能拡張メニューから追加できる。詳しくは、下記Wikiを参照のこと。</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">VS Code Lox Language</dt>
+<dd>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=dberezin.lox-language" class="bare">https://marketplace.visualstudio.com/items?itemName=dberezin.lox-language</a></p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>インストールできたら、結果のわかるスナップを取得し、下記画像をそのスナップで置き換えなさい。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>images</code> ディレクトリにある <code>lox-language-plugin-installed.png</code> を上書き保存する。</p>
+</li>
+</ul>
 </div>
-<div class="sect3">
-<h4 id="_git">2.3.2. Git</h4>
-<div class="paragraph">
-<p>（Windowsを想定し）Git For Windowsをインストールする。</p>
+</li>
+</ul>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-インストーラ実行中の設定で <code>Git Bash</code> の追加を忘れないこと。
+後でプレビューを確認する。そのときに、下記のダミー画像が、自分の撮ったスナップに置き換わっていることを確認すること。
 </td>
 </tr>
 </table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/lox-language-plugin-installed.png" alt="lox language plugin installed" width="100%">
+</div>
+<div class="title">図 1. Lox用の機能拡張をインストールした</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/lox-language-plugin-installed-exsample.png" alt="lox language plugin installed exsample" width="100%">
+</div>
+<div class="title">図 2. 実行した結果のスナップの例</div>
+</div>
+<div class="paragraph">
+<p>スナップ（スクリーンショット）の撮り方は、次のページを参考にしなさい。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Windowsのスクリーンショットを撮る4つの方法</dt>
+<dd>
+<p><a href="https://www.pc-koubou.jp/magazine/35994?srsltid=AfmBOorbVX7AYZLr4Vg7F5Zrp-4U3SbxxGypobX_REF7D-jCkLfKsEw9" class="bare">https://www.pc-koubou.jp/magazine/35994?srsltid=AfmBOorbVX7AYZLr4Vg7F5Zrp-4U3SbxxGypobX_REF7D-jCkLfKsEw9</a></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_git">2.2.4. Git</h4>
+<div class="paragraph">
+<p>ここでの説明はWindows PCに、*「Git for Windows」*をインストールすることを想定している。</p>
+</div>
+<div class="paragraph">
+<p>MacやWSL2上のGitを使う場合には、その方法に従うこと。</p>
+</div>
+<div class="paragraph">
+<p>このAssingmentでは、この後、各所の操作説明等において、<code>Git for Windows</code> のインストーラを実行中に追加した <code>Git Bash</code> を使うことを想定している。<br>
+もし、WSL2上のUbuntuや、MinGWまたはMSYS2のBashを使う、MacでZshを使うといった場合には、適宜読み替えて、自分の演習環境用の <code>Git</code>  を用意すること。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -200,155 +295,54 @@
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_git_bashの動作確認">2.2.5. Git Bashの動作確認</h4>
 <div class="paragraph">
-<p>Gitがインストールできたか確認する。</p>
+<p>Gitコマンドが利用可能になっているか確認する。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>コマンドプロンプト（Git Bashでもよい）を開く。</p>
+<p><code>Git Bash</code> を実行する。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>MSYS2やWSL2の人は、代わりに自分が演習で使うターミナルで実行すること。</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><code>git --version</code> を実行する。</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git verion 2.46.0.windows.1</code> などバージョン番号が表示されればよい。</p>
+<p><code>git verion 2.49.0.windows.1</code> などバージョン番号が表示されればよい。</p>
 </li>
 </ul>
 </div>
 </li>
 </ol>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_git_bashの確認">2.3.3. Git Bashの確認</h4>
 <div class="paragraph">
-<p>GitBashの設定を調整する。</p>
+<p>ここでも、実行結果のスナップを撮って、下記の画像を置き換えなさい。</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Windowsのタスクバーのスタートメニューの検索欄に「Git Bash」を入力して検索する。</p>
-</li>
-<li>
-<p>ポップアップしたスタートアップメニューのアプリ欄に表示される「Git Bash」をクリックして起動する。</p>
-</li>
-<li>
-<p>Git Bashのターミナルが表示される。</p>
-</li>
-<li>
-<p>ターミナルの左上のアイコンをクリックし、ポップアップメニューを表示する。</p>
-</li>
-<li>
-<p>ポップアップしたメニューから「Options」をクリックして、Optionsダイアログを表示する。</p>
-</li>
-<li>
-<p>左の「Looks」欄を選択し、右に表示された項目の「Theme」で「luminous」など、背景が明るいテーマから好みのものを選択する。</p>
-</li>
-<li>
-<p>左の「Text」欄を選択し、右に表示された項目の「Font」で「Select」ボタンをクリックし、日本語のフォントを選択、フォントサイズを少し大きめに変更する。</p>
-</li>
-<li>
-<p>右下の「Save」ボタンをクリックして設定を保存する。</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>下記実行例の <code>$</code> はターミナルが表示するプロンプトを表す。
-<strong>自分の入力ではないので入力しないこと。</strong></p>
-</div>
-<div class="paragraph">
-<p>ターミナルのプロンプトは、実行する環境によって少しずつ異なる。
-たとえば、ある環境では、実際に表示されてるプロンプトは、</p>
-</div>
-<div class="paragraph">
-<p><code>kuboaki@LAPTOP-URPL5RT3 MINGW64 /y/nichidai/cit-complier-special (main)</code><br>
-<code>$ （ここで入力待ち）</code></p>
-</div>
-<div class="paragraph">
-<p>のようになっていた。</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">確認の実行例（1）</div>
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ cd /y/Users/kuboaki/cit-compiler-special <i class="conum" data-value="1"></i><b>(1)</b>
-$ pwd <i class="conum" data-value="2"></i><b>(2)</b>
-/y/Users/kuboaki/cit-compiler-special <i class="conum" data-value="3"></i><b>(3)</b>
-$ ls <i class="conum" data-value="4"></i><b>(4)</b>
-README.adoc codes/ css/ image_size_matter.adoc images/ <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+<img src="images/git-bash-installed.png" alt="git bash installed" width="100%">
 </div>
+<div class="title">図 3. Git Bashの動作を確認した</div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><code>cd</code> はディレクトリの移動コマンド。この例では、 <code>y</code> がドライブ名、後に続くのが演習のAssignmentのあるディレクトリ。</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><code>pwd</code> は、現在のディレクトリを表示するコマンド。</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>ディレクトリが移動できているか確認した。</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
-<td><code>ls</code> コマンドで現在のディレクトリのファイルとディレクトリをリストする。</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="5"></i><b>5</b></td>
-<td><code>README.adoc</code> やその他のファイルやディレクトが含まれていることを確認した。</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">確認の実行例（2）</div>
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ head -50 README.adoc <i class="conum" data-value="1"></i><b>(1)</b>
-
-:linkcss:
-:stylesdir: css
-:stylesheet: mystyle.css
-（中略）
-== 演習の準備 <i class="conum" data-value="2"></i><b>(2)</b>
-
-[IMPORTANT]
---
-基本的には講義中の演習を実施していたのであれば、これらの準部はすでに済んでいるはず。
-もし、講義中に準備していなかったものがあれば、最初にこれらを準備すること（していなければ演習そのものが実施できない）。
---
-
-=== 参照する資料</code></pre>
+<img src="images/git-bash-installed-exsample.png" alt="git bash installed exsample" width="100%">
 </div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><code>head</code> は、テキストファイルの先頭を表示するコマンド。 <code>-50</code> オプションで、先頭から50行目までをから表示するよう指示している。</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Git Bashのターミナルで日本語が文字化けしていないことを確認した。</td>
-</tr>
-</table>
+<div class="title">図 4. 実行した結果のスナップの例</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_java開発環境jdk">2.3.4. Java開発環境（JDK）</h4>
+<h4 id="_java開発環境jdk">2.2.6. Java開発環境（JDK）</h4>
 <div class="paragraph">
 <p>Oracle JDKまたはOpenJDKをインストールする</p>
 </div>
@@ -368,21 +362,11 @@ README.adoc codes/ css/ image_size_matter.adoc images/ <i class="conum" data-val
 </div>
 </li>
 <li>
-<p>VS Codeを使う人は下記を参照してプラグインを導入するとよい</p>
+<p>VS Codeを使う人は下記を参照してプラグインを導入するとよい。</p>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="https://note.com/liber_grp/n/n88f3f0a6fdf1" class="bare">https://note.com/liber_grp/n/n88f3f0a6fdf1</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Eclipseを使う人は下記を参照してPleiades All in One Eclipseを導入するとよい</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://willbrains.jp/index.html#/pleiades_distros2024.html" class="bare">https://willbrains.jp/index.html#/pleiades_distros2024.html</a></p>
 </li>
 </ul>
 </div>
@@ -392,25 +376,26 @@ README.adoc codes/ css/ image_size_matter.adoc images/ <i class="conum" data-val
 <div class="paragraph">
 <p>インストールできたか確認する。</p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>古いJDKが入っていると、演習のプログラムが「コンパイルできない・動作しないとい」ったことが起きる。
-古いものがあれば削除し、それから新しいものをインストールすること。</p>
+<p>古いJDKやJREが入っていると、演習のプログラムが <strong>「コンパイルできない・動作しない」</strong> といったことが起きる。<br>
+コントロールパネルの「プログラムの追加と削除」などで、古いものが残っていないか確認する。
+もし残っていいれば削除し、それから新しいものをインストールすること。</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="listingblock">
-<div class="title">確認の実行例</div>
+<div class="title">JDKがインストールできたか確認する</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ java --version <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ java --version <i class="conum" data-value="1"></i><b>(1)</b>
 openjdk 21.0,6 2025-01-21 LTS <i class="conum" data-value="2"></i><b>(2)</b>
 （略）
 #javac --version <i class="conum" data-value="3"></i><b>(3)</b>
@@ -437,15 +422,125 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>ここでも、実行結果のスナップを撮って、下記の画像を置き換えなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/jdk-installed.png" alt="jdk installed" width="100%">
+</div>
+<div class="title">図 5. JDKのインストールを確認した</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/jdk-installed-example.png" alt="jdk installed example" width="100%">
+</div>
+<div class="title">図 6. 実行した結果のスナップの例</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_git_bashの設定">2.2.7. Git Bashの設定</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Windowsのタスクバーのスタートメニューの検索欄に「Git Bash」を入力して検索する。</p>
+</li>
+<li>
+<p>ポップアップしたスタートアップメニューのアプリ欄に表示される「Git Bash」をクリックして起動する。</p>
+</li>
+<li>
+<p>Git Bashのターミナルが表示される。</p>
+</li>
+<li>
+<p>ターミナルの左上のアイコンをクリックし、ポップアップメニューを表示する。</p>
+</li>
+<li>
+<p>ポップアップしたメニューから「Options」をクリックして、Optionsダイアログを表示する。</p>
+</li>
+<li>
+<p>左の「Looks」欄を選択し、右に表示された項目の「Theme」で「luminous」など、背景が明るいテーマから好みのものを選択する。</p>
+</li>
+<li>
+<p>左の「Text」欄を選択し、右に表示された項目の「Font」で「Select」ボタンをクリックし、日本語のフォントを選択、フォントサイズを少し大きめ（14ptから20pt程度）に変更する。</p>
+</li>
+<li>
+<p>右下の「Save」ボタンをクリックして設定を保存する。</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>下記実行例の <code>$</code> はターミナルが表示するプロンプトを表す。
+<strong>自分の入力ではないので入力しないこと。</strong></p>
+</div>
+<div class="paragraph">
+<p>ターミナルのプロンプトは、実行する環境によって少しずつ異なる。
+たとえば、ある環境では、実際に表示されてるプロンプトは、</p>
+</div>
+<div class="paragraph">
+<p><code>AaBbCc@LAPTOP-URPL5RT3 MINGW64 /y/nichidai/cit-complier-special (main)</code><br>
+<code>$ （ここで入力待ち）</code></p>
+</div>
+<div class="paragraph">
+<p>のようになっていた。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Git Bashの動作を確認する</div>
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">kuboaki@elwood64 ~
+$ cd /c/Users/uboaki/Desktop/ <i class="conum" data-value="1"></i><b>(1)</b>
+kuboaki@elwood64 ~/Desktop
+$ pwd <i class="conum" data-value="2"></i><b>(2)</b>
+/c/Users/kuboaki/Desktop <i class="conum" data-value="3"></i><b>(3)</b>
+kuboaki@elwood64 ~/Desktop
+$ ls <i class="conum" data-value="4"></i><b>(4)</b>
+ ImDiskTk-x64/        'Tera Term.lnk'*   desktop.ini
+'Shin - Chrome.lnk'*   astah_sysml.lic   hakoniwa-px4-win/ <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>cd</code> はディレクトリの移動コマンド。この例では、 <code>c</code> がドライブ名、後に続くのが自分のデスクトップのディレクトリ。 <code>kuboaki</code> はログイン名。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>pwd</code> は、現在のディレクトリを表示するコマンド。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>ディレクトリが移動できているか確認した。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><code>ls</code> コマンドで現在のディレクトリのファイルとディレクトリをリストする。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>このディレクトリに含まれているファイルやディレクトが確認できた。名前の後ろに <code>/</code> がついているのはディレクトリ名。</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_githubアカウントの作成">2.4. GitHubアカウントの作成</h3>
+<h3 id="_githubアカウントの作成">2.3. GitHubアカウントの作成</h3>
 <div class="paragraph">
-<p>GitHubクラスルームを使うためには、日大のメールアカウントで作成したGitHubアカウントが必要。</p>
+<p>GitHub classroomを使うには、日大のメールアカウントで作成したGitHubアカウントが必要。</p>
 </div>
 <div class="paragraph">
-<p>もし、日大のメールアカウントを使用したGitHubアカウントを作成していないなら、下記ページを参照して、個人用アカウント作成すること。</p>
+<p>もし、日大のメールアカウントを使用したGitHubアカウントを作成していないなら、講義資料(01-02回）や、下記ページを参照して、個人用アカウント作成すること。</p>
 </div>
 <div class="dlist">
 <dl>
@@ -457,13 +552,17 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_githubの_personal_access_token_の作成">2.5. GitHubの Personal Access Token の作成</h3>
+<h3 id="_githubの_personal_access_token_の作成">2.4. GitHubの Personal Access Token の作成</h3>
 <div class="paragraph">
-<p>GitHubはベーシック認証（ユーザー名とパスワード）をやめている。
+<p>もし、Personal Access Token を作成していない（または使えなくなってしまっている）なら、ここで新たに作成する。</p>
+</div>
+<div class="paragraph">
+<p>GitHubはベーシック認証（ユーザー名とパスワードによる認証）をやめている。
 その代わりとして、コマンドラインからGitHubにアクセスするときにパスワード入力を求められたら、パスワードの代わりにあらかじめ作成しておいた Personal Access Token を使う。</p>
 </div>
 <div class="paragraph">
-<p>下記手順を参考にして、 Personal Access Token を作成する。</p>
+<p>下記手順を参考にして、 Personal Access Token を作成する。
+詳しくは、講義資料(01-02回）を参考にするとよい。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -489,6 +588,9 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 <li>
 <p>トークン名をつけるよう求められたら、 <code>for_pc_cli</code> など自分で用途がわかる名前をつけておく。</p>
 </li>
+<li>
+<p><strong>アクセストークンはテキストファイルとしてデスクトップなどに保存しておく。</strong></p>
+</li>
 </ol>
 </div>
 <div class="admonitionblock caution">
@@ -500,7 +602,8 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 <td class="content">
 <div class="paragraph">
 <p>作成したアクセストークンは、必ずすぐに分かる場所（デスクトップ等）に電子的に保管しておくこと。<br>
-コマンドラインからGitHubを使うときに、パスワードの代わりに入力できるよう備えておく。</p>
+コマンドラインからGitHubを使うときに、パスワードの代わりに入力できるよう備えておく。
+なくしたり、わからなくなったら、新しいトークンを作成してそれを使う。</p>
 </div>
 </td>
 </tr>
@@ -508,7 +611,7 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_プレビューアの準備と確認">2.6. プレビューアの準備と確認</h3>
+<h3 id="_ブラウザ用プレビューアの準備と確認">2.5. ブラウザ用プレビューアの準備と確認</h3>
 <div class="paragraph">
 <p>このファイル <code>README.adoc</code> のような Asciidoctor 形式のファイルをプレビューするため、プレビューアを用意する。</p>
 </div>
@@ -584,6 +687,9 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>Assignmentを入手後、機能拡張の動作を確認する。</p>
+</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -592,11 +698,40 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>もし、Chromeブラウザでadocファイルのプレビューが表示できない場合は、プレビューにこだわらずに、テキストエディタでテキストファイルとして参照する。</p>
+<p>もし、Chromeブラウザでadocファイルのプレビューが表示できない場合は、VS Codeのプラグインを使うか、プレビューにこだわらずにテキストエディタでテキストファイルとして参照する。</p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vs_code用プレビューアの準備と確認">2.6. VS Code用プレビューアの準備と確認</h3>
+<div class="paragraph">
+<p>このファイル <code>README.adoc</code> のような Asciidoctor 形式のファイルをプレビューするため、プレビューアプラグインを導入する。
+ただし、このプラグインは、AsciiDoc用であって、Asciidoctor 形式とは少し異なるため、表示が崩れてしまう場合があることに注意する。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>VS Codeをインストールしていないなら、インストールする。</p>
+</li>
+<li>
+<p>VS Codeの左下の歯車アイコンをクリックして、ポップアップメニューから「Extensions（機能拡張）」を選択する。</p>
+</li>
+<li>
+<p>左上の検索入力部分に「asciidoc」と入力して、機能拡張を検索する。</p>
+</li>
+<li>
+<p>検索結果から、 asciidoctor.org が署名している「AsciiDoc (AsciiDoc support for Visual Studio Code)」を選択する。</p>
+</li>
+<li>
+<p>編集ウィンドウ内の「AsciiDoc」のプロフィールから「Install」をクリックする。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Assignmentを入手後、機能拡張の動作を確認する。</p>
 </div>
 </div>
 <div class="sect2">
@@ -609,7 +744,7 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>ここでは、 Git Bash ターミナルを使って作業することに注意。</p>
+<p>ここでは、 Git Bash ターミナル（あるいは自分が用意した環境のターミナル）を使って作業することに注意。</p>
 </div>
 </td>
 </tr>
@@ -618,7 +753,7 @@ javac 21.0.6 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 <div class="listingblock">
 <div class="title">演習用作業ディレクトリを作る</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ cd <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ cd <i class="conum" data-value="1"></i><b>(1)</b>
 $ mkdir compiler-work <i class="conum" data-value="2"></i><b>(2)</b>
 $ cd compiler-work <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
@@ -627,11 +762,11 @@ $ cd compiler-work <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>自分のホームディレクトリに移動する（引数なしの <code>cd</code> はホームへの移動）。</td>
+<td>引数なしの <code>cd</code> コマンドを使って、自分のホームディレクトリに移動する（引数なしで実行するとホームへ移動する）。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><code>compiler-work</code> という名前のディレクトリを作る。</td>
+<td><code>mkdir</code> コマンドで <code>compiler-work</code> という名前のディレクトリを作る。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -639,15 +774,16 @@ $ cd compiler-work <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 <div class="paragraph">
 <p>既存の他のリポジトリのディレクトリの中に作業用ディレクトリを作らないこと。
+そうするとリポジトリの入れ子ができてしまう。
 リポジトリの入れ子があると、commitやpushでpermission エラーになることがある。</p>
 </div>
 <div class="listingblock">
@@ -679,18 +815,27 @@ $ cd compiler-work <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_このassignmentのリポジトリをcloneする">2.8. このAssignmentのリポジトリをCloneする</h3>
+<h3 id="_このassignmentを受理acceptする">2.8. このAssignmentを受理（Accept）する</h3>
+<div class="paragraph">
+<p>先述の「 <code>GitHub_Classroom_Assignmentの受け取り方_20220920.pdf</code> 」を参照して、このAssignmentを受理しなさい。</p>
+</div>
+<div class="paragraph">
+<p>受理すると、自分のGitHubアカウントのホームディレクトリに「cit-compiler-special-アカウント名」のようなリポジトリが作られる。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_このassignmentのリポジトリをcloneする">2.9. このAssignmentのリポジトリをCloneする</h3>
 <div class="paragraph">
 <p>作成した作業ディレクトリにこのAssignmentのリポジトリをCloneしなさい。</p>
 </div>
 <div class="olist arabic">
-<div class="title">このAsaignmentをCloneするURLを取得する</div>
+<div class="title">このAsaignmentをCloneするためのURLを取得する</div>
 <ol class="arabic">
 <li>
 <p>ウェブブラウザで、このAsaignmentのGitHubリポジトリページを開く。</p>
 </li>
 <li>
-<p>ページ上部にある「&lt;&gt; Code」という緑のボタンをクリックして、ポップアップメニューを開く。</p>
+<p>ページ上部、やや右よりにある「&lt;&gt; Code」という緑のボタンをクリックして、ポップアップメニューを開く。</p>
 </li>
 <li>
 <p>ポップアップしたメニューから「Local」タブ、「HTTPS」タブを選択し、「Clone using the web URL」の上の欄のURLをコピーする。</p>
@@ -700,33 +845,278 @@ $ cd compiler-work <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 <div class="listingblock">
 <div class="title">演習用作業ディレクトリにAsaignmentをCloneする</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
-（どこかの）/compiler-work
-$ git clone （取得したURL） <i class="conum" data-value="2"></i><b>(2)</b>
-$ cd （リポジトリ名） <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+<pre class="highlight"><code class="language-console" data-lang="console">$ cd （自分が用意した）/compiler-work <i class="conum" data-value="1"></i><b>(1)</b>
+$ pwd <i class="conum" data-value="2"></i><b>(2)</b>
+（自分が用意した）/compiler-work
+$ git clone （取得したURL） <i class="conum" data-value="3"></i><b>(3)</b>
+$ cd （リポジトリ名） <i class="conum" data-value="4"></i><b>(4)</b>
+$ ls <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>作業用ディレクトリ <code>compiler-work</code> にいることを確認した。</td>
+<td>作業用ディレクトリ <code>compiler-work</code> へ移動する。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><code>git clone</code> コマンドを使って、自分のAssignmentのリポジトリをCloneする。</td>
+<td>作業用ディレクトリ <code>compiler-work</code> にいることを確認した。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>git clone</code> コマンドを使って、自分のAssignmentのリポジトリをCloneする。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>cloneしたディレクトリへ移動する。</td>
 </tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>ディレクトリの内容が、cloneしたGitHubリポジトリに含まれているもの同じか確認する。</td>
+</tr>
 </table>
+</div>
+<div class="paragraph">
+<p>ここでも、実行結果のスナップを撮って、下記の画像を置き換えなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/git-clone-result.png" alt="git clone result" width="100%">
+</div>
+<div class="title">図 7. AssignmentをCloneしたディレクトリを確認した</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/git-clone-result-example.png" alt="git clone result example" width="100%">
+</div>
+<div class="title">図 8. 実行した結果のスナップの例</div>
+</div>
+<div class="sect3">
+<h4 id="_assignmentのリポジトリをターミナルから確認する">2.9.1. Assignmentのリポジトリをターミナルから確認する</h4>
+<div class="paragraph">
+<p>ターミナルから、Cloneしたリポジトリが参照できることを確認する。</p>
+</div>
+<div class="listingblock">
+<div class="title">リポジトリの確認（1）</div>
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">（Assignmentのディレクトリにいるとする）
+$ head -50 README.adoc <i class="conum" data-value="1"></i><b>(1)</b>
+
+:linkcss:
+:stylesdir: css
+:stylesheet: mystyle.css
+（中略）
+== 演習の準備
+
+[IMPORTANT]
+--
+基本的には講義中の演習を実施していたのであれば、これらの準部はすでに済んでいるはず。 +
+もし、講義中に準備していなかったものがあれば、最初にこれらを準備すること。 +
+（していなければ演習そのものが実施できないだろう） <i class="conum" data-value="2"></i><b>(2)</b>
+--</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>head</code> は、テキストファイルの先頭を表示するコマンド。 <code>-50</code> オプションで、先頭から50行目までをから表示するよう指示している。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Git Bashのターミナルで日本語が文字化けしていないことを確認した。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ここでも、実行結果のスナップを撮って、下記の画像を置き換えなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-console-result.png" alt="readme adoc console result" width="100%">
+</div>
+<div class="title">図 9. headコマンドでREADME.adocの中身を確認した</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-console-result-example.png" alt="readme adoc console result example" width="100%">
+</div>
+<div class="title">図 10. 実行した結果のスナップの例</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_assignmentのリポジトリをブラウザから確認する">2.9.2. Assignmentのリポジトリをブラウザから確認する</h4>
+<div class="paragraph">
+<p>ブラウザで、Cloneしたリポジトリ一覧や、adocファイルが参照・プレビューできることを確認する。</p>
+</div>
+<div class="olist arabic">
+<div class="title">リポジトリの確認（2）</div>
+<ol class="arabic">
+<li>
+<p>chromeで、URLにこのREADMEファイルのあるディレクトリを指定し、ディレクトリリストが参照できるか確認する（アカウント名、ディレクトリ名は各自の環境に合わせて入力すること）。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="file:///c:/Users/アカウント名/Assignmentのディレクトリ" class="bare">file:///c:/Users/アカウント名/Assignmentのディレクトリ</a></code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>開けなかった場合は、Chromeウェブストアから「ローカルファイルリンク有効化」をChromeに追加する。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://chromewebstore.google.com/detail/enable-local-file-links/nikfmfgobenbhmocjaaboihbeocackld?hl=ja" class="bare">https://chromewebstore.google.com/detail/enable-local-file-links/nikfmfgobenbhmocjaaboihbeocackld?hl=ja</a></code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ディレクトリリストが参照できるか確認する。</p>
+</li>
+<li>
+<p>AsciiDocファイルがプレビューができるか確認する。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Chromeブラウザのアドレスバーの下段にあるプラグインのアイコン並びからAsciiDocプラグインのアイコンを探す（見つからないなら拡張機能メニューから探す）。</p>
+</li>
+<li>
+<p>アイコンを右クリックしてポップアップメニューから「オプション」を選択する。</p>
+</li>
+<li>
+<p>ポップアップする小さいウィンドウはそのまま閉じてよい。</p>
+</li>
+<li>
+<p>設定項目の中から「ファイルのURLへのアクセスを許可する」をONにする。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>設定後に再び <code>README.adoc</code> を開き、adocファイルがプレビューできることを確認する。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>以後は、Asciidoctor形式のファイルをブラウザで開いていると、AsciiDocプラグインのアイコンをクリックするたびに、テキスト形式とプレビューが切り替えられるようになる。</p>
+</div>
+<div class="paragraph">
+<p>ここでも、実行結果のスナップを撮って、下記の画像を置き換えなさい（example02のようにプレビュー画面を撮る）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-chrome-result.png" alt="readme adoc chrome result" width="100%">
+</div>
+<div class="title">図 11. ChromeでREADME.adocをプレビューした</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-chrome-result-example01.png" alt="readme adoc chrome result example01" width="100%">
+</div>
+<div class="title">図 12. 実行した結果のスナップの例(1)</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-chrome-result-example02.png" alt="readme adoc chrome result example02" width="100%">
+</div>
+<div class="title">図 13. 実行した結果のスナップの例(2)</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_assignmentのリポジトリをvs_codeから確認する">2.9.3. AssignmentのリポジトリをVS Codeから確認する</h4>
+<div class="paragraph">
+<p>VS Codeで、Cloneしたリポジトリ一覧や、adocファイルが参照・プレビューできることを確認する。</p>
+</div>
+<div class="olist arabic">
+<div class="title">リポジトリの確認（3）</div>
+<ol class="arabic">
+<li>
+<p>VS Codeで、File＞Open Folderでファイルダイアログを開く。</p>
+</li>
+<li>
+<p>Assignmentのディレクトリを選択し、「Select Folder」をクリックすると、フォルダーが左側にツリー展開される。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>初めて開くディレクトリの場合、「このフォルダーの作者を信頼するか？」というダイアログが表示されるので、「はい、信頼します」を選択する。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ディレクトリのリストから、<code>README.adoc</code> を選択する。</p>
+</li>
+<li>
+<p>ファイルが参照できたら、画面右から2段目にあるアイコンの並びから、「Open preview」アイコン（四角の真ん中に縦棒、左下に虫眼鏡のアイコン）をクリックする。</p>
+</li>
+<li>
+<p>adocファイルがプレビューできていることを確認する。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ここでも、実行結果のスナップを撮って、下記の画像を置き換えなさい（example02のようにプレビュー画面を撮る）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-vscode-result.png" alt="readme adoc vscode result" width="100%">
+</div>
+<div class="title">図 14. VS CodeでREADME.adocをプレビューした</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/readme-adoc-vscode-result-example.png" alt="readme adoc vscode result example" width="100%">
+</div>
+<div class="title">図 15. 実行した結果のスナップの例</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_課題1">3. 課題1</h2>
+<h2 id="_課題0">3. 課題0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>氏名等をこのファイルに記載する。</p>
+</div>
+<div class="paragraph">
+<p>GitHub classroom からこのAssignmentをCloneしたら、このファイル（ <code>REAMDE.adoc</code> ）の下記部分を編集しなさい。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>氏名: みょうじ なまえ</p>
+</li>
+<li>
+<p>学籍番号: XXXXXXXX</p>
+</li>
+<li>
+<p>メールアドレス: XXXX@XXXXXXXX</p>
+</li>
+<li>
+<p>GitHubアカウント名: XXXXXXXX</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+このファイル（ <code>README.adoc</code> ）が編集できたら、コミットしてプッシュしなさい。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_課題1">4. 課題1</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>作成済みのLoxインタプリタ（jLox）を使って、Loxのプログラムを動かしなさい。</p>
@@ -734,17 +1124,29 @@ $ cd （リポジトリ名） <i class="conum" data-value="3"></i><b>(3)</b></co
 <div class="listingblock">
 <div class="title">cit-compiler-specialのディレクトリ構成</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">cit-compiler-special
+<pre class="highlight"><code class="language-text" data-lang="text">cit-compiler-special-xxxxxx <i class="conum" data-value="1"></i><b>(1)</b>
 ├── README.adoc
 ├── codes/
 ├── css/
 ├── image_size_matter.adoc
 ├── images/
-└── jlox/</code></pre>
+└── jlox/ <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>クローンしたリポジトリ名は、各自で異なる。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>作成済みのjLoxはこのディレクトリに含まれている。</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
-<h3 id="_作成済みのjloxを動かす">3.1. 作成済みのjLoxを動かす</h3>
+<h3 id="_作成済みのjloxを動かす">4.1. 作成済みのjLoxを動かす</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -767,20 +1169,21 @@ $ cd （リポジトリ名） <i class="conum" data-value="3"></i><b>(3)</b></co
 <div class="listingblock">
 <div class="title">実行例</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ cd jlox <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ pwd
+/c/Users/アカウント名/compiler-work/cit-compiler-special-xxxxxx <i class="conum" data-value="1"></i><b>(1)</b>
+$ cd jlox <i class="conum" data-value="2"></i><b>(2)</b>
 $ ls
-com/ <i class="conum" data-value="2"></i><b>(2)</b>
-$ javac com/craftinginterpreters/lox/Lox.java <i class="conum" data-value="3"></i><b>(3)</b>
-$ ls com/
-$ ls com/craftinginterpreters/lox/*.class <i class="conum" data-value="4"></i><b>(4)</b>
+com/ <i class="conum" data-value="3"></i><b>(3)</b>
+$ javac com/craftinginterpreters/lox/Lox.java <i class="conum" data-value="4"></i><b>(4)</b>
+$ ls com/craftinginterpreters/lox/*.class <i class="conum" data-value="5"></i><b>(5)</b>
  com/craftinginterpreters/lox/Environment.class
   （略）
  com/craftinginterpreters/lox/TokenType.class
-$ java com.craftinginterpreters.lox.Lox <i class="conum" data-value="5"></i><b>(5)</b>
+$ java com.craftinginterpreters.lox.Lox <i class="conum" data-value="6"></i><b>(6)</b>
 Welcom! Lox interpreter(jLox)
-&gt; print 1 +2; <i class="conum" data-value="6"></i><b>(6)</b>
+&gt; print 1 +2; <i class="conum" data-value="7"></i><b>(7)</b>
 3
-&gt; ^C <i class="conum" data-value="7"></i><b>(7)</b>
+&gt; ^C <i class="conum" data-value="8"></i><b>(8)</b>
 $</code></pre>
 </div>
 </div>
@@ -788,37 +1191,50 @@ $</code></pre>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><code>cd</code> コマンドで、このAssignmentの <code>jlox</code> ディレクトリへ移動した。</td>
+<td><code>pwd</code> コマンドで、現在のディレクトリがassignmentのディレクトリであることを確認した。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><code>ls</code> コマンドで、ディレクトリのリストを表示した。</td>
+<td><code>cd</code> コマンドで、このAssignmentの <code>jlox</code> ディレクトリへ移動した。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td><code>javac</code> コマンドを使って、ソースコードをコンパイルした。</td>
+<td><code>ls</code> コマンドで、ディレクトリのリストを表示した。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td><code>ls</code> コマンドで、classファイルができているか確認した。</td>
+<td><code>javac</code> コマンドを使って、ソースコードをコンパイルした。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
-<td><code>java</code> コマンドを使って、 jLox を起動した。</td>
+<td><code>ls</code> コマンドで、classファイルができているか確認した。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>実行したいプログラムを入力し、結果が表示されるのを確認した。</td>
+<td><code>java</code> コマンドを使って、 jLox を起動した。</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>実行したいプログラムを入力し、結果が表示されるのを確認した。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
 <td><code>Ctrl + C</code> （CtrlキーとCキーを同時に押して）インタプリタを停止した。</td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>上記実行例のように、jLoxのコンパイルからサンプルプログラムを実行するまでのターミナルのスナップを撮り、下記画像を置き換えなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/jlox-orig-run-result.png" alt="jlox orig run result" width="100%">
+</div>
+<div class="title">図 16. jLoxを動かした</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="run_jlox_anywhere">3.2. 任意の場所でjLoxを動かす</h3>
+<h3 id="run_jlox_anywhere">4.2. 任意の場所でjLoxを動かす</h3>
 <div class="paragraph">
 <p>他のディレクトリで jLox を利用したいときは、コマンドラインの <code>-cp</code> オプションを使って classpath を指定する。</p>
 </div>
@@ -828,12 +1244,11 @@ $</code></pre>
 <div class="listingblock">
 <div class="title">別のディレクトリでloxインタプリタを実行する</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ pwd
+<pre class="highlight"><code class="language-console" data-lang="console">$ pwd
 （どこかの）/cit-compiler-special/jlox
 $ cd ../codes <i class="conum" data-value="1"></i><b>(1)</b>
 $ ls <i class="conum" data-value="2"></i><b>(2)</b>
-breakfast02.bnf          sample01.lox  tiny_lang.bnf
-personal_infomation.csv  sample02.lox
+block_test.lox breakfast.lox sample01.lox sample02.lox
 $ java -cp ../jlox com.craftinginterpreters.lox.Lox sample02.lox <i class="conum" data-value="3"></i><b>(3)</b>
 60
 false
@@ -858,41 +1273,42 @@ true
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>実行した様子のスナップで下記画像を置き換えなさい。</p>
 </div>
+<div class="paragraph">
+<p>上記実行例のように、jLoxのコンパイルからサンプルプログラムを実行するまでのターミナルのスナップを撮り、下記画像を置き換えなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/jlox-orig-aux-run-result.png" alt="jlox orig aux run result" width="100%">
+</div>
+<div class="title">図 17. jLoxを使って別のディレクトリにあるプログラムを動かした</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_課題2">5. 課題2</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_loxプログラムを作成して動かす">3.3. Loxプログラムを作成して動かす</h3>
+<h3 id="_loxプログラムを作成して動かす">5.1. Loxプログラムを作成して動かす</h3>
 <div class="paragraph">
 <p>次のLoxプログラム <code>breakfast.lox</code> を <code>codes</code> ディレクトリに作成しなさい。</p>
 </div>
-<div class="listingblock">
-<div class="title">作成するLoxプログラム（ <code>breakfast.lox</code> ）</div>
+<div class="imageblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">class Breakfast {
-  init(meat, bread) {
-    this.meat = meat;
-    this.bread = bread;
-  }
-  cook() {
-    return "Cooking now ... " + this.meat + " and " + this.bread + ".";
-  }
-  serve(who) {
-    return "Enjoy your breakfast(" + this.meat + ", " + this.bread + "), " + who + ".";
-  }
-}
-
-var breakfast = Breakfast("sausage", "toast");
-print breakfast.cook();
-print breakfast.serve("Gentleman");
-print clock();</code></pre>
+<img src="images/breakfast-lox-code.png" alt="breakfast lox code" width="100%">
 </div>
+<div class="title">図 18. 作成するLoxプログラム（ <code>breakfast.lox</code> ）</div>
 </div>
 <div class="paragraph">
-<p>作成できたら、 <a href="#run_jlox_anywhere"> 3.2</a> に示した方法で実行しなさい。</p>
+<p>作成できたら、 <a href="#run_jlox_anywhere"> 4.2</a> に示した方法で実行しなさい。</p>
 </div>
 <div class="listingblock">
 <div class="title"><code>breakfast.lox</code> を実行する</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
 （どこかの）/cit-compiler-special/coedes
 $ ls <i class="conum" data-value="2"></i><b>(2)</b>
 breakfast.lox breakfast02.bnf  personal_infomation.csv
@@ -918,39 +1334,27 @@ $ java -cp ../jlox com.craftinginterpreters.lox.Lox breakfast.lox <i class="conu
 </table>
 </div>
 <div class="paragraph">
-<p>次のページを参考に、<code>breakfast.lox</code> をターミナル上で実行している様子のスクリーンショットを撮りなさい。</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Windowsのスクリーンショットを撮る4つの方法</dt>
-<dd>
-<p><a href="https://www.pc-koubou.jp/magazine/35994?srsltid=AfmBOorbVX7AYZLr4Vg7F5Zrp-4U3SbxxGypobX_REF7D-jCkLfKsEw9" class="bare">https://www.pc-koubou.jp/magazine/35994?srsltid=AfmBOorbVX7AYZLr4Vg7F5Zrp-4U3SbxxGypobX_REF7D-jCkLfKsEw9</a></p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>取得したスクリーンショットを <code>images</code> ディレクトリの <code>breakfast.png</code> と置き換えなさい。
-その後、このページをリロードすると、下図が取得したスクリーンショットと置き換わったことを確認しなさい。</p>
+<p><code>breakfast.lox</code> をターミナル上で実行している様子のスクリーンショットを撮りなさい。</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/breakfast.png" alt="breakfast" width="50%">
+<img src="images/breakfast.png" alt="breakfast" width="100%">
 </div>
-<div class="title">図 1. breakfast.loxを実行した結果</div>
+<div class="title">図 19. <code>breakfast.lox</code> を実行した結果</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_作業を保存する">3.4. 作業を保存する</h3>
+<h3 id="_作業を保存する">5.2. 作業を保存する</h3>
 <div class="paragraph">
 <p>このAsainnmenntのリポジトリをコミットして、プッシュしなさい。</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
 （どこかの）/cit-compiler-special/
 $ git add . <i class="conum" data-value="2"></i><b>(2)</b>
 $ git status <i class="conum" data-value="1"></i><b>(1)</b>
-$ git commit -m "update" <i class="conum" data-value="3"></i><b>(3)</b>
+$ git commit -m "update for Ex.1" <i class="conum" data-value="3"></i><b>(3)</b>
 $ git status <i class="conum" data-value="4"></i><b>(4)</b>
 $ git push <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
@@ -983,17 +1387,17 @@ $ git push <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_課題2">4. 課題2</h2>
+<h2 id="_課題3">6. 課題3</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Javaを使って、講義で実施した範囲をカバーするLoxのインタプリタを作りなさい。</p>
 </div>
 <div class="sect2">
-<h3 id="_開発用ディレクトリを作成する">4.1. 開発用ディレクトリを作成する</h3>
+<h3 id="_開発用ディレクトリを作成する">6.1. 開発用ディレクトリを作成する</h3>
 <div class="listingblock">
 <div class="title">開発用ディレクトリを作成する</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ pwd <i class="conum" data-value="1"></i><b>(1)</b>
 （このAssignmentのディレクトリ）
 $ cd codes <i class="conum" data-value="2"></i><b>(2)</b>
 $ mkdir com <i class="conum" data-value="3"></i><b>(3)</b>
@@ -1024,40 +1428,26 @@ $ touch com/craftinginterpreters/lox/Lox.java <i class="conum" data-value="4"></
 </div>
 </div>
 <div class="sect2">
-<h3 id="_テキストの4章を作成する">4.2. テキストの4章を作成する</h3>
+<h3 id="_テキストの4章を作成する">6.2. テキストの4章を作成する</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Visual Studio Codeなどのテキストエディタで、4章までのコードを打ち込み、保存しなさい。</p>
+<p>VS Codeなどのテキストエディタで、4章までのLoxのコードを打ち込み、保存しなさい。</p>
 </li>
 <li>
-<p>次の実行例に従ってプログラムをコンパイルし、実行しなさい。</p>
+<p>次の実行例に従ってプログラムをコンパイルしなさい。</p>
 </li>
 </ol>
 </div>
 <div class="listingblock">
 <div class="title">実行例</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">(codesディレクトリにいる）
+<pre class="highlight"><code class="language-console" data-lang="console">(codesディレクトリにいる）
 $ javac com/craftinginterpreters/lox/Lox.java <i class="conum" data-value="1"></i><b>(1)</b>
 $ ls com/craftinginterpreters/lox/*.class <i class="conum" data-value="2"></i><b>(2)</b>
  com/craftinginterpreters/lox/Environment.class
   （略）
- com/craftinginterpreters/lox/TokenType.class
-$ java com.craftinginterpreters.lox.Lox doughnut.lox <i class="conum" data-value="3"></i><b>(3)</b>
-CLASS class null
-IDENTIFIER Doughnut null
-LEFT_BRACE { null
-  （略）
-PRINT print null
-STRING "Pipe fill of custrard and coast with chcolate." Pipe fill of custrard and coast with chcolate.
-SEMICOLON ; null
-RIGHT_BRACE } null
-  （略）
-RIGHT_PAREN ) null
-SEMICOLON ; null
-EOF  null
-&gt; ^C <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+ com/craftinginterpreters/lox/TokenType.class</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -1070,20 +1460,85 @@ EOF  null
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td><code>ls</code> コマンドで、classファイルができているか確認した。</td>
 </tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>次のLoxプログラム <code>doughnut.lox</code> を <code>codes</code> ディレクトリに作成しなさい。</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/doughnut-lox-code.png" alt="doughnut lox code" width="100%">
+</div>
+<div class="title">図 20. 作成するLoxプログラム（ <code>doughnut.lox</code> ）</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>下記手順を参考に、作成した <code>doughnut.lox</code> を実行しなさい。</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">実行例</div>
+<div class="content">
+<pre class="highlight"><code class="language-console" data-lang="console">(codesディレクトリにいる）
+$ java com.craftinginterpreters.lox.Lox doughnut.lox <i class="conum" data-value="1"></i><b>(1)</b>
+CLASS class null
+IDENTIFIER Doughnut null
+LEFT_BRACE { null
+  （略）
+PRINT print null
+STRING "Pipe fill of custrard and coast with chcolate." Pipe fill of custrard and coast with chcolate.
+SEMICOLON ; null
+RIGHT_BRACE } null
+  （略）
+RIGHT_PAREN ) null
+SEMICOLON ; null
+EOF  null
+&gt; ^C <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
 <tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td><code>java</code> コマンドを使って、 jLox を起動した。<code>doughnut.lox</code> を指定した。</td>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>java</code> コマンドを使って、 jLox を起動した。実行プログラムとして <code>doughnut.lox</code> を指定した。</td>
 </tr>
 <tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
 <td><code>Ctrl + C</code> （CtrlキーとCキーを同時に押して）インタプリタを停止した。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ターミナルで、4章までのコードを使って <code>doughnut.lox</code> を実行している様子のスクリーンショットを撮りなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/doughnut-lox-result.png" alt="doughnut lox result" width="100%">
+</div>
+<div class="title">図 21. <code>doughnut.lox</code> を実行した結果</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+4章が終わったら、下記手順を参考に、コミットしてプッシュしなさい。
+</td>
 </tr>
 </table>
 </div>
 <div class="listingblock">
 <div class="title">変更をコミット（commit）する</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ git status <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlight"><code class="language-console" data-lang="console">$ git status <i class="conum" data-value="1"></i><b>(1)</b>
 $ git add . <i class="conum" data-value="2"></i><b>(2)</b>
 $ git status <i class="conum" data-value="3"></i><b>(3)</b>
 $ git commit -m "4章まで作成した" <i class="conum" data-value="4"></i><b>(4)</b>
@@ -1125,8 +1580,13 @@ Password for 'https:...（リポジトリのURL）': （Personal access token）
 </table>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_課題4">7. 課題4</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_テキストの5章を作成する">4.3. テキストの5章を作成する</h3>
+<h3 id="_テキストの5章を作成する">7.1. テキストの5章を作成する</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1157,6 +1617,21 @@ $ java com.craftinginterpreters.lox.AstPrinter <i class="conum" data-value="2"><
 </tr>
 </table>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/doughnut-lox-result.png" alt="doughnut lox result" width="100%">
+</div>
+<div class="title">図 22. <code>doughnut.lox</code> を実行した結果</div>
+</div>
+<div class="paragraph">
+<p>ターミナルで、5章までのコードを使って 上記サンプルを実行している様子のスクリーンショットを撮りなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chap05-result.png" alt="chap05 result" width="100%">
+</div>
+<div class="title">図 23. 5章の実行結果</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1171,7 +1646,7 @@ $ java com.craftinginterpreters.lox.AstPrinter <i class="conum" data-value="2"><
 </div>
 </div>
 <div class="sect2">
-<h3 id="_テキストの6章を作成する">4.4. テキストの6章を作成する</h3>
+<h3 id="_テキストの6章を作成する">7.2. テキストの6章を作成する</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1207,6 +1682,15 @@ $ java com.craftinginterpreters.lox.Lox <i class="conum" data-value="2"></i><b>(
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>ターミナルで、6章までのコードを使って 上記サンプルを実行している様子のスクリーンショットを撮りなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chap06-result.png" alt="chap06 result" width="100%">
+</div>
+<div class="title">図 24. 6章の実行結果</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1220,8 +1704,13 @@ $ java com.craftinginterpreters.lox.Lox <i class="conum" data-value="2"></i><b>(
 </table>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_課題5">8. 課題5</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_テキストの7章を作成する">4.5. テキストの7章を作成する</h3>
+<h3 id="_テキストの7章を作成する">8.1. テキストの7章を作成する</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1260,6 +1749,15 @@ $ java com.craftinginterpreters.lox.Lox <i class="conum" data-value="2"></i><b>(
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>ターミナルで、7章までのコードを使って 上記サンプルを実行している様子のスクリーンショットを撮りなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chap07-result.png" alt="chap07 result" width="100%">
+</div>
+<div class="title">図 25. 7章の実行結果</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1274,7 +1772,7 @@ $ java com.craftinginterpreters.lox.Lox <i class="conum" data-value="2"></i><b>(
 </div>
 </div>
 <div class="sect2">
-<h3 id="_テキストの8章を作成する">4.6. テキストの8章を作成する</h3>
+<h3 id="_テキストの8章を作成する">8.2. テキストの8章を作成する</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1317,6 +1815,15 @@ global c</pre>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>ターミナルで、8章までのコードを使って 上記サンプルを実行している様子のスクリーンショットを撮りなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chap08-result.png" alt="chap08 result" width="100%">
+</div>
+<div class="title">図 26. 8章の実行結果</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1331,7 +1838,7 @@ global c</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_テキストの9章を作成する">4.7. テキストの9章を作成する</h3>
+<h3 id="_テキストの9章を作成する">8.3. テキストの9章を作成する</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1370,6 +1877,15 @@ true
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>ターミナルで、9章までのコードを使って 上記サンプルを実行している様子のスクリーンショットを撮りなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chap09-result.png" alt="chap09 result" width="100%">
+</div>
+<div class="title">図 27. 9章の実行結果</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1386,7 +1902,7 @@ true
 </div>
 </div>
 <div class="sect1">
-<h2 id="_演習課題3">5. 演習課題3</h2>
+<h2 id="_課題6">9. 課題6</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>本講義の演習に使用したテキストのAmazonの商品ページのカスタマーレビュー欄に、このテキストを使って演習したことについてカスタマーレビューを投稿しなさい。</p>
@@ -1449,20 +1965,45 @@ true
 </dd>
 </dl>
 </div>
+<div class="paragraph">
+<p>掲載された書評のスナップを撮り、下記画像を置き換えなさい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/amazon-review-result.png" alt="amazon review result" width="100%">
+</div>
+<div class="title">図 28. Amazonに掲載された書評</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_再評価演習の提出">6. 再評価演習の提出</h2>
+<h2 id="_再評価演習の提出">10. 再評価演習の提出</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>このAssignmentについて、最終的な commit、pushの結果をもって再評価演習を提出したとみなす。</p>
+<p>このAssignmentの成果（READMEの更新、codesディレクトリの中身など）を確認して、最終的なコミットとプッシュを実行すること。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+このAssignmentについて、最終的な commit、pushの結果をもって再評価演習を提出したとみなす。
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div class="paragraph right">
+<p>以上</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-28 11:53:22 +0900
+Last updated 2026-03-11 00:52:44 +0900
 </div>
 </div>
 </body>
